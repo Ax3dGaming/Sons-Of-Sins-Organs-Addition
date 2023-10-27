@@ -1,0 +1,15 @@
+{
+  "type": "sosorgans:organ_creation",
+  "ingredients": [
+    {
+      "item": "sons_of_sins:ribs"
+    },
+    {
+      "item": "sosorgans:wither_skeleton_soul"
+    }
+  ],
+  "output": {
+    "item": "sosorgans:wither_skeleton_ribs",
+    "count": 1
+  }
+}

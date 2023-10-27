@@ -4,7 +4,7 @@
 		"0": "minecraft:block/crimson_planks",
 		"1": "minecraft:block/polished_diorite",
 		"2": "minecraft:block/netherite_block",
-		"particle": "crimson_planks"
+		"particle": "minecraft:block/crimson_planks"
 	},
 	"elements": [
 		{

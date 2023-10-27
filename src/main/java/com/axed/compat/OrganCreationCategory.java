@@ -17,9 +17,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 
 public class OrganCreationCategory implements IRecipeCategory<OrganCreatorRecipe> {
-    public static final ResourceLocation UID = new ResourceLocation(sosorgans.MODID, "gem_polishing");
+    public static final ResourceLocation UID = new ResourceLocation(sosorgans.MODID, "organ_creation");
     public static final ResourceLocation TEXTURE = new ResourceLocation(sosorgans.MODID,
-            "textures/gui/gem_polishing_station_gui.png");
+            "textures/gui/organ_creator_gui_jei.png");
 
     public static final RecipeType<OrganCreatorRecipe> ORGAN_CREATION_TYPE =
             new RecipeType<>(UID, OrganCreatorRecipe.class);
@@ -54,7 +54,8 @@ public class OrganCreationCategory implements IRecipeCategory<OrganCreatorRecipe
 
     @Override
     public void setRecipe(IRecipeLayoutBuilder builder, OrganCreatorRecipe recipe, IFocusGroup focuses) {
-        builder.addSlot(RecipeIngredientRole.INPUT, 80, 11).addIngredients(recipe.getIngredients().get(0));
+        builder.addSlot(RecipeIngredientRole.INPUT, 64, 11).addIngredients(recipe.getIngredients().get(0));
+        builder.addSlot(RecipeIngredientRole.INPUT, 96, 11).addIngredients(recipe.getIngredients().get(1));
 
         builder.addSlot(RecipeIngredientRole.OUTPUT, 80, 59).addItemStack(recipe.getResultItem(null));
     }

@@ -70,6 +70,7 @@ public class OrganCreatorRecipe implements Recipe<SimpleContainer> {
     }
 
     public static class Type implements RecipeType<OrganCreatorRecipe> {
+        private Type() {}
         public static final Type INSTANCE = new Type();
         public static final String ID = "organ_creation";
     }
@@ -79,40 +80,40 @@ public class OrganCreatorRecipe implements Recipe<SimpleContainer> {
         public static final ResourceLocation ID = new ResourceLocation(sosorgans.MODID, "organ_creation");
 
         @Override
-        public OrganCreatorRecipe fromJson(ResourceLocation pRecipeId, JsonObject pSerializedRecipe) {
-            ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "output"));
+        public OrganCreatorRecipe fromJson(ResourceLocation id, JsonObject json) {
+            ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json, "output"));
 
-            JsonArray ingredients = GsonHelper.getAsJsonArray(pSerializedRecipe, "ingredients");
+            JsonArray ingredients = GsonHelper.getAsJsonArray(json, "ingredients");
             NonNullList<Ingredient> inputs = NonNullList.withSize(2, Ingredient.EMPTY);
 
             for(int i = 0; i < inputs.size(); i++) {
                 inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
             }
 
-            return new OrganCreatorRecipe(inputs, output, pRecipeId);
+            return new OrganCreatorRecipe(inputs, output, id);
         }
 
         @Override
-        public @Nullable OrganCreatorRecipe fromNetwork(ResourceLocation pRecipeId, FriendlyByteBuf pBuffer) {
-            NonNullList<Ingredient> inputs = NonNullList.withSize(pBuffer.readInt(), Ingredient.EMPTY);
+        public @Nullable OrganCreatorRecipe fromNetwork(ResourceLocation id, FriendlyByteBuf buf) {
+            NonNullList<Ingredient> inputs = NonNullList.withSize(buf.readInt(), Ingredient.EMPTY);
 
             for(int i = 0; i < inputs.size(); i++) {
-                inputs.set(i, Ingredient.fromNetwork(pBuffer));
+                inputs.set(i, Ingredient.fromNetwork(buf));
             }
 
-            ItemStack output = pBuffer.readItem();
-            return new OrganCreatorRecipe(inputs, output, pRecipeId);
+            ItemStack output = buf.readItem();
+            return new OrganCreatorRecipe(inputs, output, id);
         }
 
         @Override
-        public void toNetwork(FriendlyByteBuf pBuffer, OrganCreatorRecipe pRecipe) {
-            pBuffer.writeInt(pRecipe.inputItems.size());
+        public void toNetwork(FriendlyByteBuf buf, OrganCreatorRecipe recipe) {
+            buf.writeInt(recipe.getIngredients().size());
 
-            for (Ingredient ingredient : pRecipe.getIngredients()) {
-                ingredient.toNetwork(pBuffer);
+            for (Ingredient ing : recipe.getIngredients()) {
+                ing.toNetwork(buf);
             }
 
-            pBuffer.writeItemStack(pRecipe.getResultItem(null), false);
+            buf.writeItemStack(recipe.getResultItem(null), false);
         }
     }
 }

@@ -1,5 +1,19 @@
 {
+  "item.sosorgans.soulium_ingot": "Soulium Ingot",
+  "item.sosorgans.bottle": "Bottle",
+  "item.sosorgans.wither_skeleton_soul":"Wither Skeleton Soul",
   "item.sosorgans.wither_skeleton_ribs": "Wither Skeleton Ribs",
+  "item.sosorgans.wither_skeleton_heart": "Wither Skeleton Heart",
+  "item.sosorgans.wither_skeleton_muscle": "Wither Skeleton Muscle",
+  "item.sosorgans.blaze_soul": "Blaze Soul",
+  "item.sosorgans.blaze_ribs": "Blaze Ribs",
+  "item.sosorgans.blaze_heart": "Blaze Heart",
+  "item.sosorgans.blaze_muscle": "Blaze Muscle",
+  "item.sosorgans.ocelot_soul": "Ocelot Soul",
+  "item.sosorgans.ocelot_ribs": "Ocelot Ribs",
+  "item.sosorgans.ocelot_heart": "Ocelot Heart",
+  "item.sosorgans.ocelot_muscle": "Ocelot Muscle",
+  "item.sosorgans.soulium_dagger": "Soulium Dagger",
   "block.sosorgans.organ_creator": "Organ Creator",
-  "itemGroup.sos_organs": "Sons Of Sins: Organs"
+  "itemGroup.sosorgans": "Sons Of Sins: Organs"
 }

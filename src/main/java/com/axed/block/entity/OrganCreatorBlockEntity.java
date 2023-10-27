@@ -1,13 +1,11 @@
 package com.axed.block.entity;
 
-import com.axed.ModItems;
 import com.axed.recipe.OrganCreatorRecipe;
 import com.axed.screen.OrganCreatorMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.Container;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -19,7 +17,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
@@ -32,7 +29,12 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Optional;
 
 public class OrganCreatorBlockEntity extends BlockEntity implements MenuProvider {
-    private final ItemStackHandler itemHandler = new ItemStackHandler(3);
+    private final ItemStackHandler itemHandler = new ItemStackHandler(3) {
+        @Override
+        protected void onContentsChanged(int slot) {
+            setChanged();
+        }
+    };
 
     private static final int INPUT_SLOT = 0;
     private static final int INPUT_SLOT_2 = 1;
@@ -66,9 +68,14 @@ public class OrganCreatorBlockEntity extends BlockEntity implements MenuProvider
 
             @Override
             public int getCount() {
-                return 3;
+                return 2;
             }
         };
+    }
+
+    @Override
+    public Component getDisplayName() {
+        return Component.literal("Organ Creator");
     }
 
     @Override
@@ -100,11 +107,6 @@ public class OrganCreatorBlockEntity extends BlockEntity implements MenuProvider
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
 
-    @Override
-    public Component getDisplayName() {
-        return Component.translatable("block.sosorgans.organ_creator");
-    }
-
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int pContainerId, Inventory pPlayerInventory, Player pPlayer) {
@@ -127,7 +129,7 @@ public class OrganCreatorBlockEntity extends BlockEntity implements MenuProvider
     }
 
     public void tick(Level pLevel, BlockPos pPos, BlockState pState) {
-        if(hasRecipe()) {
+        if(isOutputSlotEmptyOrReceivable() && hasRecipe()) {
             increaseCraftingProgress();
             setChanged(pLevel, pPos, pState);
 
@@ -146,7 +148,7 @@ public class OrganCreatorBlockEntity extends BlockEntity implements MenuProvider
 
     private void craftItem() {
         Optional<OrganCreatorRecipe> recipe = getCurrentRecipe();
-        ItemStack result = recipe.get().getResultItem(null);
+        ItemStack result = recipe.get().getResultItem(getLevel().registryAccess());
 
         this.itemHandler.extractItem(INPUT_SLOT, 1, false);
         this.itemHandler.extractItem(INPUT_SLOT_2, 1, false);
@@ -181,6 +183,11 @@ public class OrganCreatorBlockEntity extends BlockEntity implements MenuProvider
 
     private boolean canInsertAmountIntoOutputSlot(int count) {
         return this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + count <= this.itemHandler.getStackInSlot(OUTPUT_SLOT).getMaxStackSize();
+    }
+
+    private boolean isOutputSlotEmptyOrReceivable() {
+        return this.itemHandler.getStackInSlot(OUTPUT_SLOT).isEmpty() ||
+                this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() < this.itemHandler.getStackInSlot(OUTPUT_SLOT).getMaxStackSize();
     }
 
     private boolean hasProgressFinished() {

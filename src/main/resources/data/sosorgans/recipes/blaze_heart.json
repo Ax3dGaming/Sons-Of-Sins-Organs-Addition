@@ -1,0 +1,15 @@
+{
+  "type": "sosorgans:organ_creation",
+  "ingredients": [
+    {
+      "item": "sons_of_sins:heart"
+    },
+    {
+      "item": "sosorgans:blaze_soul"
+    }
+  ],
+  "output": {
+    "item": "sosorgans:blaze_heart",
+    "count": 1
+  }
+}

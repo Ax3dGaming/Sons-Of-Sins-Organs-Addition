@@ -6,6 +6,7 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -32,10 +33,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 
-import static com.axed.ModItems.ITEMS;
 import static com.axed.block.ModBlocks.BLOCKS;
 import static com.axed.block.ModBlocks.ORGAN_CREATOR;
 import static com.axed.block.entity.ModBlockEntities.BLOCK_ENTITIES;
+import static com.axed.items.ModCreativeTab.CREATIVE_MODE_TABS;
+import static com.axed.items.ModItems.*;
 import static com.axed.recipe.ModRecipes.SERIALIZERS;
 import static com.axed.screen.ModMenuTypes.MENUS;
 
@@ -45,14 +47,6 @@ public class sosorgans
 {
     public static final String MODID = "sosorgans";
     private static final Logger LOGGER = LogUtils.getLogger();
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
-
-    public static final RegistryObject<CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("sos_organs", () -> CreativeModeTab.builder()
-            .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> ORGAN_CREATOR.get().asItem().getDefaultInstance())
-            .displayItems((parameters, output) -> {
-                output.accept(ORGAN_CREATOR.get());
-            }).build());
 
     public sosorgans()
     {

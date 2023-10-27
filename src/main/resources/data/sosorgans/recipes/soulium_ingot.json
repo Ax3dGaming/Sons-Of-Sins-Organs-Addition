@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "soulium_ingot",
+  "ingredient": {
+    "item": "minecraft:soul_soil"
+  },
+  "result": "sosorgans:soulium_ingot"
+}

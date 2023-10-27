@@ -71,11 +71,13 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
     implementation fg.deobf("curse.maven:sons-of-sins-538529:4809930")
+    implementation fg.deobf("curse.maven:the-one-probe-245211:4629624")
 
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"))
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"))
     runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}"))
 }
+
 
 tasks.named('processResources', ProcessResources).configure {
     var replaceProperties = [

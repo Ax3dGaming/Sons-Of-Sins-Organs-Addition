@@ -1,0 +1,15 @@
+{
+  "type": "sosorgans:organ_creation",
+  "ingredients": [
+    {
+      "item": "sons_of_sins:ribs"
+    },
+    {
+      "item": "sosorgans:ocelot_soul"
+    }
+  ],
+  "output": {
+    "item": "sosorgans:ocelot_ribs",
+    "count": 1
+  }
+}

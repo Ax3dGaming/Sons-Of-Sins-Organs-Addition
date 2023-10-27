@@ -12,7 +12,7 @@ public class ModRecipes {
             DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, sosorgans.MODID);
 
     public static final RegistryObject<RecipeSerializer<OrganCreatorRecipe>> ORGAN_CREATION_SERIALIZER =
-            SERIALIZERS.register("gem_polishing", () -> OrganCreatorRecipe.Serializer.INSTANCE);
+            SERIALIZERS.register("organ_creation", () -> OrganCreatorRecipe.Serializer.INSTANCE);
 
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);

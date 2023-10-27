@@ -1,6 +1,6 @@
 package com.axed.block;
 
-import com.axed.ModItems;
+import com.axed.items.ModItems;
 import com.axed.sosorgans;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;

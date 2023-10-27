@@ -30,13 +30,13 @@ public class JEISosorgansPlugin implements IModPlugin {
     public void registerRecipes(IRecipeRegistration registration) {
         RecipeManager recipeManager = Minecraft.getInstance().level.getRecipeManager();
 
-        List<OrganCreatorRecipe> polishingRecipes = recipeManager.getAllRecipesFor(OrganCreatorRecipe.Type.INSTANCE);
-        registration.addRecipes(OrganCreationCategory.ORGAN_CREATION_TYPE, polishingRecipes);
+        List<OrganCreatorRecipe> organRecipes = recipeManager.getAllRecipesFor(OrganCreatorRecipe.Type.INSTANCE);
+        registration.addRecipes(OrganCreationCategory.ORGAN_CREATION_TYPE, organRecipes);
     }
 
     @Override
     public void registerGuiHandlers(IGuiHandlerRegistration registration) {
-        registration.addRecipeClickArea(OrganCreatorScreen.class, 60, 30, 20, 30,
+        registration.addRecipeClickArea(OrganCreatorScreen.class, 84, 30, 8, 26,
                 OrganCreationCategory.ORGAN_CREATION_TYPE);
     }
 }
