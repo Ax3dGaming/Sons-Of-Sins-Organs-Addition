@@ -1,0 +1,27 @@
+{
+  "name": "Organ Creator",
+  "icon": "sosorgans:organ_creator",
+  "category": "sosorgans:machine",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "You will know everything about the Organ Creator here."
+    },
+    {
+      "type": "patchouli:empty",
+      "draw_filler": false
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "sosorgans:organ_creator",
+      "title": "Organ Creator",
+      "text": "This is the main part of the mod, you will need to use it to obtain organs."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "sosorgans:organ_creator",
+      "title": "Recipe",
+      "text": "This is the recipe of the Organ Creator"
+    }
+  ]
+}

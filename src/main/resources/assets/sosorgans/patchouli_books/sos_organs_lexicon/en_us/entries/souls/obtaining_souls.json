@@ -1,0 +1,29 @@
+{
+  "name": "Obtaining Souls",
+  "icon": "sosorgans:bottle",
+  "category": "sosorgans:souls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "You will know how to obtain souls"
+    },
+    {
+      "type": "patchouli:empty"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "sosorgans:bottle",
+      "title": "Bottle",
+      "text": "You will need this item to obtain souls."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "sosorgans:bottle",
+      "title": "Recipe"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "To obtain soul you will need to have a Bottle in your off-hand and kill a mob with the Soulium Dagger. Doing this will drop a mob soul on the ground."
+    }
+  ]
+}

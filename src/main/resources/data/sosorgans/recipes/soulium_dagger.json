@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " S ",
+    " S ",
+    " T "
+  ],
+  "key": {
+    "T": {
+      "item": "minecraft:stick"
+    },
+    "S": {
+      "item": "sosorgans:soulium_ingot"
+    }
+  },
+  "result": {
+    "item": "sosorgans:soulium_dagger"
+  }
+}

@@ -1,5 +1,6 @@
 package com.axed.items;
 
+import net.mcreator.sonsofsins.init.SonsOfSinsModTabs;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -16,7 +17,7 @@ public class ModCreativeTab {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
     public static final RegistryObject<CreativeModeTab> MOD_TAB = CREATIVE_MODE_TABS.register("sosorgans", () -> CreativeModeTab.builder()
-            .withTabsBefore(CreativeModeTabs.COMBAT).title(Component.translatable("itemGroup.sosorgans"))
+            .withTabsBefore(SonsOfSinsModTabs.SONS_OF_SINS_TAB.getId()).title(Component.translatable("itemGroup.sosorgans"))
             .icon(() -> ORGAN_CREATOR.get().asItem().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 output.accept(ORGAN_CREATOR.get());

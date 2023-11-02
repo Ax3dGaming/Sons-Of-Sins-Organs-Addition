@@ -1,0 +1,54 @@
+{
+  "name": "Blaze Organs",
+  "icon": "sosorgans:blaze_ribs",
+  "category": "sosorgans:organs",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "You will know everything about blaze organs here."
+    },
+    {
+      "type": "patchouli:empty",
+      "draw_filler": false
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "sosorgans:blaze_ribs",
+      "title": "Blaze Ribs",
+      "text": "Blaze Ribs immune your Gulber of fire."
+    },
+    {
+      "type": "patchouli:image",
+      "images": ["sosorgans:textures/gui/entries/blaze_ribs.png"],
+      "border": true,
+      "title": "Recipe",
+      "text": "Here is the recipe for the blaze ribs."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "sosorgans:blaze_heart",
+      "title": "Blaze Heart",
+      "text": "Blaze Heart spawn blazes at the death of your Gulber."
+    },
+    {
+      "type": "patchouli:image",
+      "images": ["sosorgans:textures/gui/entries/blaze_heart.png"],
+      "border": true,
+      "title": "Recipe",
+      "text": "Here is the recipe for the blaze heart."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "sosorgans:blaze_muscle",
+      "title": "Blaze Muscle",
+      "text": "Blaze Muscle set attacked entity in fire."
+    },
+    {
+      "type": "patchouli:image",
+      "images": ["sosorgans:textures/gui/entries/blaze_muscle.png"],
+      "border": true,
+      "title": "Recipe",
+      "text": "Here is the recipe for the blaze muscle."
+    }
+  ]
+}

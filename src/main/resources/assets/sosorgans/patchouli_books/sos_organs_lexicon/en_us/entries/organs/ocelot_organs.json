@@ -1,0 +1,54 @@
+{
+  "name": "Ocelot Organs",
+  "icon": "sosorgans:ocelot_ribs",
+  "category": "sosorgans:organs",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "You will know everything about ocelot organs here."
+    },
+    {
+      "type": "patchouli:empty",
+      "draw_filler": false
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "sosorgans:ocelot_ribs",
+      "title": "Ocelot Ribs",
+      "text": "Ocelot Ribs add speed II to your Gulber."
+    },
+    {
+      "type": "patchouli:image",
+      "images": ["sosorgans:textures/gui/entries/ocelot_ribs.png"],
+      "border": true,
+      "title": "Recipe",
+      "text": "Here is the recipe for the ocelot ribs."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "sosorgans:ocelot_heart",
+      "title": "Ocelot Heart",
+      "text": "Ocelot Heart randomly spawn ocelot when your Gulber is attacked."
+    },
+    {
+      "type": "patchouli:image",
+      "images": ["sosorgans:textures/gui/entries/ocelot_heart.png"],
+      "border": true,
+      "title": "Recipe",
+      "text": "Here is the recipe for the Ocelot Heart."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "sosorgans:ocelot_muscle",
+      "title": "Ocelot Muscle",
+      "text": "Ocelot Muscle add slowness to attacked entity."
+    },
+    {
+      "type": "patchouli:image",
+      "images": ["sosorgans:textures/gui/entries/ocelot_muscle.png"],
+      "border": true,
+      "title": "Recipe",
+      "text": "Here is the recipe for the Ocelot Muscle."
+    }
+  ]
+}

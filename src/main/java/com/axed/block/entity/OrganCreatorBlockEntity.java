@@ -75,7 +75,7 @@ public class OrganCreatorBlockEntity extends BlockEntity implements MenuProvider
 
     @Override
     public Component getDisplayName() {
-        return Component.literal("Organ Creator");
+        return Component.translatable("block.sosorgans.organ_creator");
     }
 
     @Override

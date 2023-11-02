@@ -1,0 +1,17 @@
+{
+  "name": "Wither Skeleton Soul",
+  "icon": "sosorgans:wither_skeleton_soul",
+  "category": "sosorgans:souls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "You will need this soul to obtain wither skeleton organs."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "sosorgans:wither_skeleton_soul",
+      "title": "Wither Skeleton Soul",
+      "text": "You can obtain this by killing wither skeleton with the soulium dagger."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "name": "Wither Skeleton Organs",
+  "icon": "sosorgans:wither_skeleton_ribs",
+  "category": "sosorgans:organs",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "You will know everything about wither skeleton organs here."
+    },
+    {
+      "type": "patchouli:empty",
+      "draw_filler": false
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "sosorgans:wither_skeleton_ribs",
+      "title": "Wither Skeleton Ribs",
+      "text": "Blaze Ribs immune your Gulber of Wither effect."
+    },
+    {
+      "type": "patchouli:image",
+      "images": ["sosorgans:textures/gui/entries/wither_skeleton_ribs.png"],
+      "border": true,
+      "title": "Recipe",
+      "text": "Here is the recipe for the wither skeleton ribs."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "sosorgans:wither_skeleton_heart",
+      "title": "Wither Skeleton Heart",
+      "text": "Blaze Heart spawn Wither Skeleton at the death of your Gulber."
+    },
+    {
+      "type": "patchouli:image",
+      "images": ["sosorgans:textures/gui/entries/wither_skeleton_heart.png"],
+      "border": true,
+      "title": "Recipe",
+      "text": "Here is the recipe for the wither skeleton heart."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "sosorgans:wither_skeleton_muscle",
+      "title": "Wither Skeleton Muscle",
+      "text": "Wither Skeleton Muscle set attacked entity in fire."
+    },
+    {
+      "type": "patchouli:image",
+      "images": ["sosorgans:textures/gui/entries/wither_skeleton_muscle.png"],
+      "border": true,
+      "title": "Recipe",
+      "text": "Here is the recipe for the wither skeleton muscle."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Blaze Soul",
+  "icon": "sosorgans:blaze_soul",
+  "category": "sosorgans:souls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "You will need this soul to obtain blaze organs."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "sosorgans:blaze_soul",
+      "title": "Blaze Soul",
+      "text": "You can obtain this by killing blaze with the soulium dagger."
+    }
+  ]
+}

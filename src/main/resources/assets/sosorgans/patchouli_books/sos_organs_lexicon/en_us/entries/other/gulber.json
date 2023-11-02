@@ -1,0 +1,15 @@
+{
+  "name": "Gulber",
+  "icon": "sons_of_sins:flesh_carcass",
+  "category": "sosorgans:other",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "This is the Gulber !"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "sons_of_sins:gulber"
+    }
+  ]
+}

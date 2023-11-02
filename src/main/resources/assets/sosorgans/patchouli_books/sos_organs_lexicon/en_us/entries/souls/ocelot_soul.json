@@ -1,0 +1,17 @@
+{
+  "name": "Ocelot Soul",
+  "icon": "sosorgans:ocelot_soul",
+  "category": "sosorgans:souls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "You will need this soul to obtain ocelot organs."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "sosorgans:ocelot_soul",
+      "title": "Ocelot Soul",
+      "text": "You can obtain this by killing ocelot with the soulium dagger."
+    }
+  ]
+}

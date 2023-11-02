@@ -1,0 +1,26 @@
+{
+  "name": "Soulium Dagger",
+  "icon": "sosorgans:soulium_dagger",
+  "category": "sosorgans:other",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "This is a sword that can give you mob souls"
+    },
+    {
+      "type": "patchouli:empty"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "sosorgans:soulium_dagger",
+      "title": "Soulium Dagger",
+      "text": "By killing some mobs with this sword you can obtain mob soul."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "sosorgans:soulium_dagger",
+      "title": "Recipe",
+      "text": "This is the recipe of the Soulium Dagger"
+    }
+  ]
+}

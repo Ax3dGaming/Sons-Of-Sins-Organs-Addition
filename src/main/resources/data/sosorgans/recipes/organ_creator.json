@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " ##",
+    " PP",
+    " PP"
+  ],
+  "key": {
+    "#": {
+      "item": "sons_of_sins:soul_steel_block"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "result": {
+    "item": "sosorgans:organ_creator"
+  }
+}

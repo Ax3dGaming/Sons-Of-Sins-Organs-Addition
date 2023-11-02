@@ -1,0 +1,25 @@
+{
+  "name": "Soulium Ingot",
+  "icon": "sosorgans:soulium_ingot",
+  "category": "sosorgans:other",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "This is just a simple ingot"
+    },
+    {
+      "type": "patchouli:empty"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "sosorgans:soulium_ingot",
+      "title": "Soulium Ingot"
+    },
+    {
+      "type": "patchouli:smelting",
+      "recipe": "sosorgans:soulium_ingot",
+      "title": "Recipe",
+      "text": "This is the recipe of the Soulium Ingot"
+    }
+  ]
+}

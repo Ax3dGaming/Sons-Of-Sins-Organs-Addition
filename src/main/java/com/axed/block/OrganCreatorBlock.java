@@ -7,14 +7,17 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -24,10 +27,10 @@ import net.minecraftforge.network.NetworkHooks;
 import javax.annotation.Nullable;
 
 public class OrganCreatorBlock extends BaseEntityBlock {
-    public static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 12, 16);
+    public static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 14, 16);
 
-    public OrganCreatorBlock(Properties pProperties) {
-        super(pProperties);
+    public OrganCreatorBlock () {
+        super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(5f, 6f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
     }
 
     @Override
@@ -82,4 +85,12 @@ public class OrganCreatorBlock extends BaseEntityBlock {
         return createTickerHelper(pBlockEntityType, ModBlockEntities.ORGAN_CREATOR_BE.get(),
                 (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
     }
+
+    @Override
+    public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
+        if (player.getInventory().getSelected().getItem() instanceof PickaxeItem tieredItem)
+            return tieredItem.getTier().getLevel() >= 2;
+        return false;
+    }
+
 }
